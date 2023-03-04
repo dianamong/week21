@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котоляндия</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1818/1818401.png" type="image/png">
+</head>
+
+<body>
+    <h1>Опрос</h1>
+    <form id="form">
+        <div><label for="userName">Ваше имя</label>
+            <input type="text" id="userName" name="userName" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required/>*
+        </div>
+
+        <div><label for="phone">Номер телефона</label>
+            <input type="text" id="phone" name="phone" minlength="10" maxlength="20"/>
+        </div>
+        <fieldset>
+            <legend><b>Расскажите про вашего питомца</b></legend>
+            <div>
+                <label for="petName">Кличка питомца</label>
+                <input type="text" id="petName" name="petName" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required/>*
+            </div>
+            <div>
+                <span>Порода питомца</span>
+                <select>
+                    <option class="breed" name="breed" value="Персидская">Персидская кошка</option>
+                    <option class="breed" name="breed" value="Мейн-кун">Мейн-кун</option>
+                    <option class="breed" name="breed" value="Британская">Британская кошка</option>
+                    <option class="breed" name="breed" value="Сиамская">Сиамская кошка</option>
+                    <option class="breed" name="breed" value="Сфинкс">Сфинкс</option>
+                    <option class="breed" name="breed" value="Шотландская вислоухая">Шотландская вислоухая</option>
+                    <option class="breed" name="breed" value="Другая">Другая, напишу в комментарии</option>
+                </select>
+            </div>
+            <div>
+                <span>Чем питается ваш питомец?</span><br />
+                <input name="food" type="checkbox" value="Сухой корм"/>Сухой корм<br />
+                <input name="food" type="checkbox" value="Влажный корм"/>Влажный корм<br />
+                <input name="food" type="checkbox" value="Натуральный корм" />Натуральный корм
+            </div>
+            <div><label for="sex">Укажите пол питомца*</label><br />
+                <input type="radio" name="sex" id="sex" value="Самец" required/> Самец<br />
+                <input type="radio" name="sex" value="Самка"/> Самка
+            </div>
+        </fieldset>
+        <div><textarea rows="5" cols="50" placeholder="Написать комментарий" name="comment"></textarea></div>
+        <div><button type="submit" class="btn">Сохранить</button></div>
+        <div id="errorMessage"></div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

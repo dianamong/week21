@@ -38,13 +38,12 @@ function checkAll() {
   for (let input of inputs) {
     checkValidity(input);
   }
-  // validateEmail(email);
+  validateEmail(email);
   validatePassword(password);
   if (checkbox.checked == false) {
     errors.push("Вы должны принять условия Пользовательского соглашения");
   }
   document.querySelector("#errorMessage").innerHTML = errors.join(". <br>");
-  return true;
 }
 
 postButton.addEventListener("click", function (e) {
